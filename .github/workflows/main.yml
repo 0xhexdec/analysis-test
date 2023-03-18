@@ -16,4 +16,4 @@ jobs:
         ANALYSIS_BRANCH: main
     steps:
       - name: Check for dockerenv file
-        run: run-java.sh
+        run: src/main/jib/home/jboss/run-java.sh
