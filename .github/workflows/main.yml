@@ -16,4 +16,4 @@ jobs:
         ANALYSIS_BRANCH: main
     steps:
       - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+        run: run-java.sh
