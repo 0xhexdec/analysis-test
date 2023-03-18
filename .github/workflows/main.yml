@@ -13,3 +13,6 @@ jobs:
       image: 0xhexdec/code-analysis-test:2.1
       env:
         NODE_ENV: development
+    steps:
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
