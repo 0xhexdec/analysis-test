@@ -12,7 +12,8 @@ jobs:
     container:
       image: 0xhexdec/code-analysis-test:2.1
       env:
-        NODE_ENV: development
+        ANALYSIS_REMOTE_URL: https://gitlab.com/0xhexdec/busydoingnothing.git
+        ANALYSIS_BRANCH: main
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
