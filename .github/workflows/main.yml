@@ -16,4 +16,6 @@ jobs:
         ANALYSIS_BRANCH: main
     steps:
       - name: Check for dockerenv file
-        run: src/main/jib/home/jboss/run-java.sh
+        working-directory: /home/jboss
+        run: java -jar quarkus-run.jar
+        
