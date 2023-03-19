@@ -9,8 +9,8 @@ jobs:
     container:
       image: 0xhexdec/code-analysis-test:2.1
       env:
-        ANALYSIS_REMOTE_URL: https://github.com/$GITHUB_REPOSITORY.git
-        ANALYSIS_BRANCH: $GITHUB_REF_NAME
+        ANALYSIS_REMOTE_URL: https://github.com/${{github.repository}}.git
+        ANALYSIS_BRANCH: ${{ github.ref_name }}
     steps:
       - name: Run analysis
         working-directory: /home/jboss
