@@ -13,7 +13,7 @@ jobs:
       image: 0xhexdec/code-analysis-test:2.1
       env:
         ANALYSIS_REMOTE_URL: https://gitlab.com/0xhexdec/busydoingnothing.git
-        ANALYSIS_BRANCH: main
+        ANALYSIS_BRANCH: master
     steps:
       - name: Check for dockerenv file
         working-directory: /home/jboss
