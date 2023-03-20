@@ -9,6 +9,8 @@ jobs:
     container:
       image: 0xhexdec/code-analysis-test:2.1
       env:
+        GRPC_HOST: ${{vars.GRPC_HOST}}
+        GRPC:PORT: ${{vars.GRPC_PORT}}
         ANALYSIS_REMOTE_URL: https://github.com/${{github.repository}}.git
         ANALYSIS_BRANCH: ${{ github.ref_name }}
         ANALYSIS_FETCH_REMOTE: "true"
