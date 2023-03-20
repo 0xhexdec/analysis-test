@@ -15,6 +15,7 @@ jobs:
         ANALYSIS_SEND_TO_REMOTE: "true"
         ANALYSIS_CALCULATE_METRICS: "true"
         ANALYSIS_RESOLVE_WILDCARDS: "true"
+        
     steps:
       - name: Run analysis
         working-directory: /home/jboss
