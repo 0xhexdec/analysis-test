@@ -11,8 +11,10 @@ jobs:
       env:
         ANALYSIS_REMOTE_URL: https://github.com/${{github.repository}}.git
         ANALYSIS_BRANCH: ${{ github.ref_name }}
-        ANALYSIS_SOURCE_DIRS: ""
-        ANALYSIS_RESTRICT_DIRS: ""
+        ANALYSIS_FETCH_REMOTE: "true"
+        ANALYSIS_SEND_TO_REMOTE: "true"
+        ANALYSIS_CALCULATE_METRICS: "true"
+        ANALYSIS_RESOLVE_WILDCARDS: "true"
     steps:
       - name: Run analysis
         working-directory: /home/jboss
